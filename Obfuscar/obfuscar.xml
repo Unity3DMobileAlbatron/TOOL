@@ -1,0 +1,14 @@
+<?xml version='1.0'?>
+<Obfuscator>
+
+  <Var name="InPath" value="Input" />
+  <Var name="OutPath" value="Output" />
+
+  <Module file="$(InPath)\Client.dll">
+    <SkipNamespace name="Game.UI.UICommon" />
+    <SkipMethod type="Game.Platform.iOS.CustomInterface" attrib="protected" rx="_.*" />
+    <SkipType name="Game.UI.*" />
+    <SkipProperty type="Game.UI.DlgBase*" name="singleton" />
+  </Module>
+
+</Obfuscator>
